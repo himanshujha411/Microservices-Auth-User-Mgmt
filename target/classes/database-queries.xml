@@ -1,0 +1,45 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean class="java.util.HashMap" id="queries">
+        <constructor-arg>
+        <map>
+        
+        <entry key="SELECT_USER_BY_USERNAME"
+                       value='select * from users where email_id=?'
+                />
+                
+        <entry key="CHECK_UserEmail_Exists"
+                       value='select count(*) from users where email_id =?'
+                />
+                
+        <entry key="INSERT_USER"
+                       value='INSERT INTO users (user_id, email_id, enabled, password) VALUES(?, ?, true, ?)'
+                />        
+        
+        <entry key="INSERT_CUSTOMER"
+                       value='INSERT INTO customer (customer_id, customer_phone, first_name, last_name, user_id, billing_address_id, shipping_address_id) VALUES(?, ?, ?, ?, ?, ?, ?)'
+                />
+                        
+        <entry key="SELECT_CUSTOMER_BY_USERID"
+                       value='select * from customer where user_id =?'
+                />
+        
+        <entry key="INSERT_AUTHORITIES"
+                       value='INSERT INTO authorities (authority_id, authorities, email_id) VALUES(?, ?, ?)'
+                />    
+        
+        <entry key="Insert_Query"
+                       value='INSERT INTO query (id, email, message, subject) VALUES(?, ?, ?, ?)'
+                /> 
+        
+        <entry key="ccccc"
+                       value='select * from customer where user_id =?'
+                />
+                        
+        </map>
+        </constructor-arg>
+    </bean>
+</beans>
