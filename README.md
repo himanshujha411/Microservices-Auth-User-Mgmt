@@ -56,8 +56,8 @@ auth-service/
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/stacksplit-auth-service.git
-   cd stacksplit-auth-service
+   git clone https://github.com/himanshujha411/Microservices-Auth-User-Mgmt.git
+   cd Microservices-Auth-User-Mgmt.git
    
 2. **Configure PostgreSQL**
 
